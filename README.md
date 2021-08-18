@@ -20,7 +20,7 @@ To a take deeper look on those eligible- employee, we will generate two reports 
 
 According to the critiria for the number of retiring employees per title given by the Pwelett Hackard, it didn't exclude the employees who are already resigned. Thus, I create an additional query to add the condition `titles.to_date = '9999-01-01'` to filter out disable employees, and that will be 72,458 roles need to be filled, please see the detail number in the column of **Count of retiring employees** in the summary table below. 
 
-```
+```SQL
 Select count(e.emp_no),
 	t.title
 from employees as e
@@ -37,7 +37,7 @@ order by count(e.emp_no) desc;
 To summarize the eligible-employee for the Mentorship Program per their title, I create a query to count the eligible-employee by title and the table to sum up the results.
 If we assume that all the qualified employees are willing to attend this program and their abilities are all reach out the standard level, on average, there are about 45 new employees will be assigned to 1 mentor. However, that would be another issue to be considered.
 
-```
+```SQL
 Select count(emp_no), title
 FROM mentorship_eligibilty
 GROUP BY title
