@@ -18,7 +18,7 @@ To a take deeper look on those eligible- employee, we will generate two reports 
 
 -	How many roles will need to be filled as the "silver tsunami" begins to make an impact?
 
-According to the critiria for the number of retiring employees per title given by the Pwelett Hackard, it didn't exclude the employees who are already resigned. Thus, I create an additional query to add the condition `titles.to_date = '9999-01-01'` to filter out disable employees, and that will be total of 72,458 roles need to be filled, please see the detail number in the column of **Count of retiring employees** in the summary table below. 
+According to the critiria for the number of retiring employees per title given by the Pwelett Hackard, it didn't exclude the employees who were already resigned. Thus, I create an additional query to add the condition `titles.to_date = '9999-01-01'` to filter out disable employees, and that will be total of 72,458 roles need to be filled, please see the detail number in the column of **Count of retiring employees** in the summary table below. 
 
 ```SQL
 Select count(e.emp_no),
